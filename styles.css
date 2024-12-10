@@ -7,44 +7,54 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  font-family: 'Roboto Slab', serif; /* Default font */
+  font-family: 'Roboto Slab', serif;
+  /* Default font */
 }
 
 .container {
   text-align: center;
 }
 
+
 #boobna {
   font-size: 5rem;
   font-weight: bold;
   color: #fff;
+  will-change: transform, text-shadow;
   text-shadow: 0 0 10px #ff8fa3, 0 0 20px #ff6a9c, 0 0 30px #e62e6b;
-  font-family: 'Dancing Script', cursive; /* Fancy script font for the title */
-  animation: glow 2s infinite alternate, floating 6s infinite ease-in-out;
+  font-family: 'Dancing Script', cursive;
+  /* Fancy script font for the title */
+  animation: glow 1.5s infinite alternate, floating 4s infinite ease-in-out;
 }
 
 .tagline {
   font-size: 1.5rem;
   color: #fff;
-  font-family: 'Playfair Display', serif; /* Elegant serif font for the tagline */
+  font-family: 'Playfair Display', serif;
+  /* Elegant serif font for the tagline */
   animation: fadeIn 4s ease-in-out;
 }
 
 @keyframes glow {
   0% {
-    text-shadow: 0 0 10px #ff8fa3, 0 0 20px #ff6a9c, 0 0 30px #e62e6b, 0 0 40px #e62e6b;
+    text-shadow: 0 0 10px #ff8fa3, 0 0 20px #ff6a9c, 0 0 30px #e62e6b;
   }
+
   100% {
-    text-shadow: 0 0 20px #ffbdd2, 0 0 40px #ff96b3, 0 0 60px #e62e6b, 0 0 80px #e62e6b;
+    text-shadow: 0 0 20px #ffbdd2, 0 0 30px #ff96b3, 0 0 40px #e62e6b;
   }
 }
 
 @keyframes floating {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
+    /* Reduce height for smoother motion */
   }
 }
 
@@ -52,116 +62,304 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
 
 
+/* Contact Section */
+.contact-section {
+  background: transparent;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  justify-self: center;
+  margin: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-section h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  color: #e62e6b;
+}
+
+.contact-section p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+
+.what-we-do {
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  text-align: center;
+}
+
+.what-we-do h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service-card {
+  width: 250px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.our-services {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color:transparent;
+  color: #fff;
+}
+
+.our-services h2 {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.services-description {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-family: 'Roboto Slab', serif;
+  color: #fff;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service-card {
+  width: 250px;
+  background-color: transparent;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  color: #e2c1c7;
+  padding: 1rem 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+
+.service-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 1rem 0 0.5rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+  padding: 0 1rem 1rem;
+}
+
+
+.contact-details a {
+  font-size: 1.2rem;
+  color: #e62e6b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-details a:hover {
+  color: #ff6a9c;
+}
+
+.contact-details form {
+  margin-top: 15px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #e62e6b, #ff6a9c);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff6a9c, #e62e6b);
+}
 
 .photo-gallery-section {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .photo-gallery-section h2 {
-    font-size: 2.5rem;
-    color: #e62e6b;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 30px;
-  }
-  
-  .photo-gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.photo-gallery-section h2 {
+  font-size: 2.5rem;
+  color: #e62e6b;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 30px;
+}
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s, transform 1s;
+}
+
+.photo-gallery.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.photo {
+  width: 100%;
+  max-width: 220px;
+  /* max-width for flexibility */
+  height: auto;
+  /* auto height to maintain aspect ratio */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.photo img {
+  width: 100%;
+  /* Make sure the image fills the container */
+  height: 100%;
+  /* Make image fill the container's height */
+  object-fit: contain;
+  /* Ensures no zooming in */
+  border-radius: 15px;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(255, 108, 108, 0.5), rgba(0, 0, 0, 0));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.photo:hover::after {
+  opacity: 1;
+}
+
+.photo-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Roboto Slab', serif;
+  text-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 100;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.photo:hover .photo-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
     opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 1s, transform 1s;
-  }
-  
-  .photo-gallery.visible {
-    opacity: 1;
-    transform: scale(1);
-  }
-  
-  .photo {
-    width: 100%;
-    max-width: 220px; /* max-width for flexibility */
-    height: auto; /* auto height to maintain aspect ratio */
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 4px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    cursor: pointer;
-  }
-  
-  .photo img {
-    width: 100%; /* Make sure the image fills the container */
-    height: 100%; /* Make image fill the container's height */
-    object-fit: contain; /* Ensures no zooming in */
-    border-radius: 15px;
-  }
-  
-  .photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 5px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .photo::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(255, 108, 108, 0.5), rgba(0, 0, 0, 0));
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  .photo:hover::after {
-    opacity: 1;
-  }
-  
-  .photo-info {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: #fff;
-    font-size: 1.2rem;
-    font-family: 'Roboto Slab', serif;
-    text-shadow: 0 2px 4px rgba(255, 0, 0, 0.5);
-    opacity: 0;
-    z-index: 100;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
   }
-  
-  .photo:hover .photo-info {
+
+  to {
     opacity: 1;
     transform: translateY(0);
   }
-  
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+}
 
 footer {
   text-align: center;
   padding: 20px;
-  background-color:transparent;
+  background-color: transparent;
 
   margin-top: 40px;
 }
@@ -172,9 +370,11 @@ footer p {
   font-weight: bold;
   font-size: 1rem;
 }
+
 .what-we-do {
   padding: 50px 20px;
-  background: transparent; /* Matches the overall theme */
+  background: transparent;
+  /* Matches the overall theme */
   text-align: center;
   color: #fff;
 }
@@ -197,7 +397,8 @@ footer p {
 .card {
   width: 300px;
   padding: 20px;
-  background: linear-gradient(135deg, #ffe6e9, #ffb3c6); /* Gradient card background */
+  background: linear-gradient(135deg, #ffe6e9, #ffb3c6);
+  /* Gradient card background */
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -210,7 +411,8 @@ footer p {
 .card h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
-  color: #e62e6b; /* Bold pink text for the headings */
+  color: #e62e6b;
+  /* Bold pink text for the headings */
   font-family: 'Playfair Display', serif;
 }
 
@@ -237,16 +439,18 @@ footer p {
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-  
+
 }
 
 .card:hover::before {
   opacity: 1;
 }
+
 footer a {
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
 .fa {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -259,7 +463,7 @@ footer a {
 }
 
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .fa-facebook {
